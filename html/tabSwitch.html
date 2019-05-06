@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/tabSwitch.css">
+</head>
+
+<body>
+
+	<div>
+		<button type="button" onclick = "addInput()">Add Input</button>
+
+		<button type="button" onclick ="removeInput()">Remove Input</button>
+	
+		<div id="inputBoard"></div>
+	</div>
+
+	<br>
+	<br>
+	
+	<div class="tab_bar">
+		<h2 id="tab1" onclick="showTab1()" class="selected">1</h2>
+		<h2 id="tab2" onclick="showTab2()">2</h2>
+		<h2 id="tab3" onclick="showTab3()">3</h2>
+    </div>
+    
+    <div class="tab_content">
+    	<div id="c1" class="show">content1</div>
+    	<div id="c2">content2</div>
+    	<div id="c3">content3</div>
+    </div>
+
+
+    <script type="text/javascript" src="../js/tabSwitch.js"></script>
+	<script type="text/javascript" src="../js/addAndRemove.js"></script>
+</body>
+</html>

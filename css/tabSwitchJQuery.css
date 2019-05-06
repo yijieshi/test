@@ -1,0 +1,41 @@
+.tab_bar {
+	display: flex;
+}
+.tab_bar li {
+	border-top: solid #8AC007;
+	border-left: solid #8AC007;
+	border-right: solid #8AC007;
+	background-color: white;
+	width: 100px;
+	height: 20px;
+	list-style: none;
+	text-align: center;
+}
+.tab_bar li:hover {
+	background-color: #8AC007;
+}
+
+.tab_content {
+	border: solid #8AC007;
+	width: 308px;
+	height: 100px;
+}
+
+
+.switch_button {
+	border: dotted #8AC007; 
+	background-color: white;
+	border-radius: 20px;
+	width: 120px;
+    height: 40px;
+	display: none;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	margin-bottom: 120px;
+}
+

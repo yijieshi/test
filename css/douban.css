@@ -1,0 +1,434 @@
+/**
+ * 1.nav中link logo为什么用长条图片进行切割
+ * 2.为何有些把右边的写前面
+ * 3.有float right要先写吗
+ * 4.qrcode位移问题
+ * 5.设置49%
+ * 6.border-box
+ * 7.文字与图片的上下层关系
+ */
+
+html {
+    color: #111;
+    background: #fff;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body,
+td,
+th {
+    font: normal 13px/1.618 Helvetica,Arial,Hiragino Sans GB,
+    Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+}
+input {
+    outline: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+body {
+    padding-top: 30px;
+}
+.douban-nav {
+    margin: 0 auto 25px;
+    width: 950px;
+}
+.douban-nav h1 {
+    display: inline-block;
+    margin: 0;
+    margin-right: 20px;
+    width: 160px;
+    height: 34px;
+}
+.douban-nav h1 a {
+    display: block;
+    width: 160px;
+    height: 34px;
+    background: url(../img/douban/logo_douban.png) no-repeat;
+    color: transparent;
+}
+.douban-nav .douban-nav-search {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #c3c3c3;
+    width: 270px;
+    height: 30px;
+}
+
+.douban-nav .douban-nav-search .input-search {
+    display: block;
+    height: 30px;
+}
+.douban-nav .douban-nav-search .input-search input::-webkit-input-placeholder{
+    color: #ccc;
+    font: 400 13.3333px Arial;
+}
+.douban-nav .douban-nav-search .input-search input {
+    margin-right: 3px;
+    border: none;
+    padding: 5px;
+    width: 240px;
+    height: 20px;
+    font-size: 13px;
+}
+.douban-nav .douban-nav-search .button-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+}
+.douban-nav .douban-nav-search .button-search input {
+    margin: 0;
+    margin-right: 3px;
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    background: url(../img/douban/button_search.png) no-repeat;
+    background-position: center;
+    color: transparent;
+}
+.douban-nav .douban-nav-links {
+    float: right;
+    margin-top: 6px;
+}
+.douban-nav .douban-nav-links ul {
+    list-style: none;
+}
+.douban-nav .douban-nav-links ul li {
+    display: inline-block;
+    margin-left: 17px;
+}
+.douban-nav .douban-nav-links ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background: url(../img/douban/anony_nav_logo.png) no-repeat;
+    color: transparent;
+}
+.douban-nav .douban-nav-links .link-dushu {
+    background-position: 0 0;
+}
+.douban-nav .douban-nav-links .link-dianying {
+    background-position: -60px 0;
+}
+.douban-nav .douban-nav-links .link-yinyue {
+    background-position: -120px 0;
+}
+.douban-nav .douban-nav-links .link-xiaozu {
+    background-position: -180px 0;
+}
+.douban-nav .douban-nav-links .link-tongcheng {
+    background-position: -299px 0;
+}
+.douban-nav .douban-nav-links .link-fm {
+    margin-bottom: 1px;
+    background: url(../img/douban/ic_shijian_home_nav.png) no-repeat 100% 100%;
+}
+.douban-nav .douban-nav-links .link-shijian {
+    background-position: -360px 0;
+}
+.douban-nav .douban-nav-links .link-doupin {
+    width: 42px;
+    background-position: -421px 0;
+}
+.douban-reg {
+    margin-bottom: 25px;
+    height: 304px;
+    background-image: url(../img/douban/1.png);
+    background-repeat: no-repeat;
+    background-color: #edf4ed;
+    background-position: calc(50% - 305px) top;
+}
+.douban-reg .wrapper-reg {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 0 4px;
+    width: 950px;
+    height: 300px;
+}
+.douban-reg .douban-reg-app {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: inline-block;
+    margin: auto 0  auto 475px;
+    height: 120px;
+}
+.douban-reg .douban-reg-app .app-title {
+    margin: 7px 0;
+    font-size: 25px;
+    line-height: 24px;
+}
+.douban-reg .douban-reg-app .app-slogan {
+    margin: 0 0 18px;
+}
+.douban-reg .douban-reg-app a {
+    position: relative;
+    top: -10px;
+    display: inline-block;
+    margin-right: 2px;
+    border-radius: 2px;
+    padding: 9px 21px;
+    background: #00B51D;
+    color: #FFF;
+    line-height: 1;
+}
+.douban-reg .douban-reg-app .app-qrcode {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #48aa0d;
+    border-radius: 2px;
+    width: 28px;
+    height: 28px;
+    background: url(../img/douban/icon_qrcode_green.png) no-repeat;
+    background-size: 28px 28px;
+}
+.douban-reg .douban-reg-app .app-qrcode-expand {
+    position: relative;
+    display: none;
+    padding: 20px;
+    width: 160px;
+    height: 180px;
+    color: #000;
+    background-color: #fff;
+}
+.douban-reg .douban-reg-app .app-qrcode-expand img {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+}
+.douban-reg .douban-reg-app .app-qrcode-expand p {
+    position: absolute;
+    top: 175px;
+    color: #666;
+    font-size: 13px;
+    text-align: center;
+}
+.douban-reg .douban-reg-app .app-qrcode:hover + .app-qrcode-expand {
+    display: block;
+    z-index: 2;
+}
+.douban-reg .douban-reg-login {
+    position: relative;
+    float: right;
+    width: 300px;
+    height: 300px;
+}
+.douban-reg .douban-reg-login .wrapper-login {
+    padding: 30px 10px 10px;
+    width: 280px;
+    max-width: 300px;
+    height: 296px;
+}
+.douban-reg .douban-reg-login .wrapper-login .login-tab {
+    margin-bottom: 10px;
+    font-size: 0;
+}
+.douban-reg .douban-reg-login .wrapper-login .login-tab ul {
+    list-style: none;
+}
+.douban-reg .douban-reg-login .wrapper-login .login-tab ul li {
+    display: inline-block;
+    border-bottom: 1px solid #ececec;
+    width: 50%;
+    line-height: 2;
+    font-size: 13px;
+    text-align: center;
+    color: #9b9b9b;
+    cursor: pointer;
+}
+.douban-reg .douban-reg-login .wrapper-login .login-tab ul .phone-login{
+    border-bottom: 1px solid #494949;
+    font-weight: 600;
+    color: #333;
+}
+.douban-reg .douban-reg-login .wrapper-login .login-tab .login-tab-qrcode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100%;
+}
+.douban-reg .douban-reg-login .wrapper-login .login-tab .login-tab-qrcode a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/douban/download.png);
+    background-size: 30px;
+}
+.douban-reg .douban-reg-login .login-content .login-content-form {
+    position: relative;
+}
+.login-content-form .login-content-form-tips {
+    margin-bottom: 10px;
+    color: #9b9b9b;
+    font-size: 12px;
+}
+.login-content-form a {
+    color: #41ac52;
+}
+.login-content-form .login-content-form-phone {
+    position: relative;
+    margin-bottom: 10px;
+}
+.login-content-form .login-content-form-phone .login-content-form-phone-field {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.login-content-form-phone-field input {
+    border: 1px solid #e4e6e5;
+    border-radius: 3px;
+    padding-top: 8px;
+    padding-right: 40px;
+    padding-bottom: 8px;
+    padding-left: 60px;
+    width: 280px;
+    box-sizing: border-box;
+    background: #fff;
+}
+.login-content-form-phone-field .phone-area-code {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 50px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+.login-content-form-phone-field .phone-area-code::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 1px;
+    border-right: 1px solid #e4e6e5;
+    width: 0;
+    height: 22px;
+}
+.login-content-form .login-content-form-codes {
+    margin-bottom: 10px;
+    color: #fff;
+    line-height: 40px;
+}
+.login-content-form .login-content-form-codes .login-content-form-codes-field {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.login-content-form-codes-field input {
+    box-sizing: border-box;
+    border: 1px solid #e4e6e5;
+    border-radius: 3px;
+    padding: 10px;
+    width: 280px;
+    font-size: 13px;
+
+}
+.login-content-form-codes-field .codes-achievement {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 10px;
+    line-height: 42px;
+}
+.login-content-form-codes-field .codes-achievement a {
+    color: #41ac52;
+}
+.login-content-form .login-content-form-submit {
+    position: relative;
+    display: block;
+    width: 280px;
+}
+.login-content-form .login-content-form-submit a {
+    display: block;
+    border-radius: 3px;
+    line-height: 34px;
+    background: rgba(66,189,86,.5);
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+.login-content .login-content-footer .login-content-remember {
+    display: inline-block;
+    margin: 10px 0;
+}
+.login-content-remember input {
+    margin-right: 4px;
+}
+.login-content .login-content-footer .login-content-link {
+    float: right;
+    margin: 10px 0;
+}
+.login-content-link a {
+    color: #41ac52;
+}
+.login-content-footer::after {
+    content: "";
+    clear: both;
+}
+.login-content .login-content-3rd {
+    position: relative;
+    top: 0;
+    bottom: 30px;
+    display: block;
+    border-top: 1px solid #ddd;
+    width: 250px;
+
+}
+.login-content .login-content-3rd .content-3rd-hd {
+    display: inline-block;
+    color: #9b9b9b;
+    font-size: 11px;
+    text-align: center;
+}
+.login-content .login-content-3rd .content-3rd-bd {
+    display: inline-block;
+    padding-top: 10px;
+    text-align: center;
+}
+.login-content .login-content-3rd .content-3rd-bd a {
+    display: inline-block;
+    margin: 0 0 0 12px;
+    width: 22px;
+    height: 22px;
+    line-height: 36px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.login-content .login-content-3rd .content-3rd-bd .content-3rd-bd-wx {
+    background: url(../img/douban/wechat.png) no-repeat;
+    background-size: 100% 100%;
+}
+.login-content .login-content-3rd .content-3rd-bd .content-3rd-bd-wb {
+    background: url(../img/douban/weibo.png) no-repeat;
+    background-size: 100% 100%;
+}
